@@ -18,7 +18,7 @@ export default function NotFound() {
         lineHeight:'1.6',}}>주소가 잘못되었습니다.</div>
 
       <div
-        onClick={()=>navigate('/')} //홈경로론
+        onClick={()=>navigate('/')} //홈경로로 이동
         style={{
         fontSize:'32px',
         lineHeight: '1.6',
