@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import LoginControl from './LoginControl'
+import { LoginControl } from './LoginControl'
 
 export default function Header() {
   return (

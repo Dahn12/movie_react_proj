@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Tv() {
+export default function TV() {
   return (
-    <div>Tv</div>
+    <div className='page-container' style ={{fontSize:'32px'}}>TV</div>
   )
 }

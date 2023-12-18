@@ -1,38 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-export default function LoginControl() {
+export const LoginControl = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  //   const handleClick = () => {
+  //     setIsLoggedIn(!isLoggedIn);
+  //   };
+  const handleLoginClick = () => {
+    setIsLoggedIn(true);
+  };
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false);
+  };
   return (
-    <div className='login-control-toggle'>
-        <Toggle />
+    <div
+      style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}
+    >
+      {/* <LoginButton onClick={handleClick}> */}
+      <div className='LoginButton'
+        onClick={isLoggedIn == false ? handleLoginClick : handleLogoutClick}
+        // onClick={handleClick}
+      >
+        {isLoggedIn ? '로그인' : '로그아웃'}
+      </div>
+      <div style={{ color: 'white', marginLeft: 24 }}>
+        {isLoggedIn ? '로그인 해주세요!' : '환영합니다!'}
+      </div>
     </div>
-  )
-}
-
-class Toggle extends React.Component{
-    constructor(props){ /*생성자 만들어줌 */
-        super(props)/*생성자 초기화*/ 
-        this.state = {
-            isLoggedIn: true, /*초기값: flase*/
-        }
-
-        // 함수를 바인딩 해줌
-        this.handleChange = this.handleChange.bind(this);
-    }
-
-    handleChange(){
-        this.setState({
-            isLoggedIn: !this.state.isLoggedIn,
-        })
-            console.log(this.state.isLoggedIn);
-    }
-
-
-    render() {
-        return(
-            <div>
-                <button className='login-control-btn' onClick={this.handleChange}>{this.state.isLoggedIn? "로그인":"로그아웃"}</button>
-            </div>
-        );
-    }
-}
+  );
+};
 
