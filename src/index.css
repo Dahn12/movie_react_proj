@@ -66,7 +66,7 @@ body{
     margin: 16px;
     background-color: #373b69;
     color: white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -152,3 +152,88 @@ body{
 }
 
 /*LoginPage*/
+.page{
+    position: absolute;
+    top: 144px;
+    bottom: 80px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 20px;
+    border-radius: 20px;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    background-color: white;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.titleWrap{
+    margin-top: 70px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.contentWrap{
+    margin-top: 26px;
+    flex: 1;
+}
+
+.inputTitle{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.inputWrap{
+    display: flex;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 8px;
+    background-color: white;
+    border: 1px solid #e2e0e0;
+}
+
+.inputWrap:focus-within {
+    border: 1px solid #0B344F;
+}
+
+.input{
+    width: 100%;
+    outline: none;
+    border: none;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.input::placeholder{
+    color: #dadada;
+}
+
+.errorMessageWrap{
+    margin: 8px;
+    color: red;
+    font-size: 12px;
+}
+
+.bottomButton{
+    width: 100%;
+    height: 48px;
+    margin-bottom: 47px;
+    border: none;
+    font-weight: 700;
+    background-color: #0B344F;
+    border-radius: 64px;
+    color: white;
+    cursor: pointer;
+}
+
+.bottomButton:disabled{
+    background-color: #dadada;
+    color: white;
+}
